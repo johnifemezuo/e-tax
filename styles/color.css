@@ -1,0 +1,10 @@
+:root {
+  --sidebar: #f7f9fb;
+  --darkgray: #7f8284;
+  --textgray: #464646;
+  --lightBlue: #5888ee;
+  --overlayColor: rgba(0, 0, 0, 0.3);
+  --redColor:  rgb(248 113 113);
+  --greenColor: rgb(34 197 94);
+  --muted:rgb(175, 175, 175);
+}
