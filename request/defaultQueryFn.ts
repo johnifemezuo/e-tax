@@ -34,19 +34,22 @@ export const defaultQueryFn = async <T>(
 
     const json = await resp.json();
     // check if bearer token was returned
-    if (json && json.access_token && !node && !bearer) {
-      await setBearerToken(json.access_token);
+    if (json && json.token && !node && !bearer) {
+      await setBearerToken(json.token, true);
     }
 
     if (json.statusCode && json.statusCode === 401 && !node && !bearer) {
       // log user out
       await setBearerToken("");
       localStorage.removeItem("userProfile");
+      localStorage.removeItem("bearToken");
     }
 
+    // if (Number(json.statusCode)) {
+    // }
     return { json, ok: await resp.ok };
   } catch (e) {
     console.log(e);
-    throw new Error(e);
+    // throw new Error(e);
   }
 };

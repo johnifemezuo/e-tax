@@ -1,8 +1,8 @@
 import React from "react";
-import ButtonDanger from "../../components/AdminLayouts/Button/ButtonDanger";
-import ButtonInfo from "../../components/AdminLayouts/Button/ButtonInfo";
-import ButtonSucess from "../../components/AdminLayouts/Button/ButtonSucess";
-import ButtonWarning from "../../components/AdminLayouts/Button/ButtonWarning";
+import ButtonDanger from "../../components/Dashboard/AdminLayouts/Button/ButtonDanger";
+import ButtonInfo from "../../components/Dashboard/AdminLayouts/Button/ButtonInfo";
+import ButtonSucess from "../../components/Dashboard/AdminLayouts/Button/ButtonSucess";
+import ButtonWarning from "../../components/Dashboard/AdminLayouts/Button/ButtonWarning";
 
 function buttons() {
   return (

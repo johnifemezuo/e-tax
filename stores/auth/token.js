@@ -17,7 +17,7 @@ const getDefaultValues = async () => {
 
 export const bearerToken = () => ({
   getBearerToken: getDefaultValues,
-  setBearerToken: async (newBearerToken, rememberMe) => {
+  setBearerToken: (newBearerToken, rememberMe) => {
     try {
       if (!rememberMe) {
         useStore.setState({ token: newBearerToken });
@@ -25,9 +25,9 @@ export const bearerToken = () => ({
         return newBearerToken;
       } else {
         useStore.destroy();
-        return await localStorage.setItem("bearToken", newBearerToken);
+        
+        return localStorage.setItem("bearToken", newBearerToken);
       }
-    } catch (e) {
-    }
+    } catch (e) {}
   },
 });

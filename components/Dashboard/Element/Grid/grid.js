@@ -1,6 +1,6 @@
 import React from "react";
-import Grid from "../../components/AdminLayouts/Grid/Grid";
-import GridChild from "../../components/AdminLayouts/Grid/GridChild";
+import Grid from "../../components/Dashboard/AdminLayouts/Grid/Grid";
+import GridChild from "../../components/Dashboard/AdminLayouts/Grid/GridChild";
 
 function grid() {
   return (

@@ -3,7 +3,7 @@ import { defaultQueryFn } from "./defaultQueryFn";
 import { useCreateQuery } from "./queries/useCreateQuery";
 import { useDeleteQuery } from "./queries/useDeleteQuery";
 import { useEditQuery } from "./queries/useEditQuery";
-import { useGetQuery } from "./queries/useGetQuery";
+import { queryData, useGetQuery } from "./queries/useGetQuery";
 import { usePutQuery } from "./queries/usePutQuery";
 import { useFetchResponse } from "./useFetchResponse";
 
@@ -40,7 +40,9 @@ export const useModel = ({
     onSuccess
   );
 
-
+  const loadData = (link = getLink, qs = queryString, cache = routeCache) => {
+    return queryData(link, qs, cache);
+  };
   // build create
   let create = useCreateQuery(
     createLink,
@@ -72,9 +74,9 @@ export const useModel = ({
       },
       serverError: query.serverError,
       isServerError: query.isServerError,
-      paginate: setRouteCache,
       search: setRouteCache,
       route: routeCache,
+      loadData,
     },
 
     create: {

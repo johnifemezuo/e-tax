@@ -1,6 +1,6 @@
-import React from 'react'
-import CardItems from '../../components/AdminLayouts/CardItems/CardItems'
-import Container from '../../layout/Container';
+import React from "react";
+import CardItems from "../../components/Dashboard/AdminLayouts/CardItems/CardItems";
+import Container from "../../layout/Container";
 
 function carditems() {
   return (
@@ -34,4 +34,4 @@ function carditems() {
   );
 }
 
-export default carditems
+export default carditems;

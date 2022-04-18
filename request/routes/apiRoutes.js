@@ -1,13 +1,15 @@
 export const API_ROUTES = {
   register: {
-    post: "/auth/register",
+    post: "/register",
   },
   login: {
-    post: "/auht/login",
+    post: "/login",
   },
-  user: {
-    post: "/auth/register",
+  users: {
+    post: "/register",
     edit: "/users",
+    get: (id) => `/users/${id}`,
+    getAll: "/admin/users",
     patch: "/user",
     put: "/user",
   },

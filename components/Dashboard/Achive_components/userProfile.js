@@ -1,8 +1,8 @@
 import React from 'react'
-import Container from '../../layout/Container';
+import Container from '../../../layout/Container';
 import ProfileDescription from "./ProfileDescription";
 import CoverImageAndProfileImage from "./CoverImageAndProfileImage";
-import GeneralDetails from "../../components/Achive_components/GeneralDetails";
+import GeneralDetails from "./GeneralDetails";
 import EachDetails from "./EachDetails";
 
 function userProfile() {

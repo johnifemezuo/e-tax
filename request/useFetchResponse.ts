@@ -30,6 +30,8 @@ export const useFetchResponse = <T>(queryObject: QueryApiResult<T>) => {
       setData(queryObject?.data?.json);
     }
   }, [queryObject.data]);
+
+  
   const resetErrors = () => {
     // console.log('called')
     setErrors(() => ({
@@ -37,6 +39,15 @@ export const useFetchResponse = <T>(queryObject: QueryApiResult<T>) => {
       isServerError: false,
     }));
   };
+
+  useEffect(() => {
+    if (queryObject.isLoading) {
+      setErrors({
+        serverError: null,
+        isServerError: false,
+      });
+    }
+  }, [queryObject.isLoading]);
 
   const resetData = () => {
     setData(null);

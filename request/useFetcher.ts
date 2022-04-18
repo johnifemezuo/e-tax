@@ -1,33 +1,71 @@
 import { atom, useAtom } from "jotai";
-import { useMemo } from "react";
+import { useRouter } from "next/router";
+import { useEffect, useMemo, useState } from "react";
 import { useModel } from "./useModel";
 
 type RequestType = {
   links: {
-    post: string;
-    delete: string;
-    get: string;
-    patch: string;
-    update: string;
-    put: string;
+    post?: string;
+    delete?: string;
+    get?: string;
+    patch?: string;
+    update?: string;
+    put?: string;
   };
-  refetchCaches: any[];
-  load: false;
-  freshCache: any;
-  isFileAmong: false;
-  refetchOnGet: false;
+  refetchCaches?: any[];
+  load?: boolean;
+  freshCache?: any;
+  isFileAmong?: false;
+  refetchOnGet?: false;
 };
 
-export const useFetcher: any = (config: RequestType) => {
+export const useFetcher = (config: RequestType) => {
+  // remove on react native
+
+  const [page, setPage] = useState<number>(1);
+  const { query, push, route } = useRouter();
   const rtc = useMemo(
     () =>
       atom({
-        page: 1,
+        page: page ?? 1,
         search: null,
         nextCursor: null,
       }),
-    []
+    [page]
   );
+
+  useEffect(() => {
+    if (query && query.page && !isNaN(Number(query.page))) {
+      setPage(Number(query.page));
+    }
+  }, [query]);
+
+  const nextPage = (pageNumber?: number) => {
+    if (pageNumber) {
+      setPage(Number(pageNumber));
+      push(`${route}?page=${pageNumber}`);
+    } else {
+      let newPageNumber = Number(query.page ?? page);
+      newPageNumber += 1;
+      setPage(Number(newPageNumber));
+
+      push(`${route}?page=${newPageNumber}`);
+    }
+  };
+
+  const prevPage = (pageNumber?: number) => {
+    if (pageNumber) {
+      setPage(Number(pageNumber));
+      push(`${route}?page=${pageNumber}`);
+    } else {
+      let newPageNumber = Number(query.page ?? page);
+      newPageNumber -= 1;
+      setPage(Number(newPageNumber));
+      push(`${route}?page=${newPageNumber}`);
+      window.scrollTo(0, 0);
+    }
+  };
+
   const [queryCache, setQueryCache] = useAtom(rtc);
   const edc = useMemo(() => atom(null), []);
   const editCategory = useAtom(edc);
@@ -72,7 +110,16 @@ export const useFetcher: any = (config: RequestType) => {
 
   return {
     ...model,
-    get: { ...model.get, queryCache: routeQueryCache, setQueryCache },
+    get: {
+      ...model.get,
+      queryCache: routeQueryCache,
+      setQueryCache,
+      paginate: {
+        currentPage: page,
+        nextPage,
+        prevPage,
+      },
+    },
   };
 };
 

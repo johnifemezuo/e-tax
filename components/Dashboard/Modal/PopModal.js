@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Modal from "../../components/AdminLayouts/Modal/Modal";
 import Container from "../../layout/Container";
 
 function ModalPage() {
