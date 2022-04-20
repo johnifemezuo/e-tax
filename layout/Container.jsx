@@ -1,8 +1,9 @@
-import React, { Children } from "react";
+import React from "react";
+import style from "./Container.module.css"
 
 function Container({ children }) {
   return (
-    <div className="max-w-screen-l mx-auto bg-transparent px-6 my-12">
+    <div className={style.container}>
       {children}
     </div>
   );

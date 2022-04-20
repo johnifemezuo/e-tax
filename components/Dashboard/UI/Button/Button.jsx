@@ -6,9 +6,8 @@ function ButtonDanger({ click, customStyle, children, disabled, isloading }) {
   return (
     <button
       disabled={disabled}
-      className={`${customStyle}text-center theme-transition shadow-lg/50 buttonNeutral flex cursor-pointer items-center border  border-gray-300 bg-white text-gray-600
-       first-letter:uppercase  hover:bg-gray-100
-        focus:outline focus:outline-4 dark:border-gray-500`}
+      className={`${customStyle} text-center theme-transition buttonNeutral cursor-point uppercase
+        `}
       onClick={click}
     >
       {children}

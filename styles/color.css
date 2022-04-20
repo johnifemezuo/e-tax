@@ -7,4 +7,12 @@
   --redColor:  rgb(248 113 113);
   --greenColor: rgb(34 197 94);
   --muted:rgb(175, 175, 175);
+
+  /* --------etax colors--------------- */
+  --primary: #FFAF22;
+  --primaryDark: #151515;
+  --green: #5DC522;
+  --teal:#1786A8;
+  --textColor: #656565;
+  --primaryTransparent: #ffaf22f2;
 }
