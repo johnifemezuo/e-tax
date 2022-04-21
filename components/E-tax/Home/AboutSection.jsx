@@ -5,14 +5,14 @@ import Button from "../../Dashboard/UI/Button/Button";
 
 function AboutSection() {
   return (
-    <div className="  w-full  md:flex">
-      <div className="items-center space-y-6 py-20 md:flex md:flex-row-reverse md:space-y-0 md:py-0">
-        <div className="ml- -mt-[150px] px-6 md:w-[500px] md:pl-20">
+    <div className="  w-full h-full md:mt-0 mt-[200px] md:flex">
+      <div className="  items-center space-y-6 py-20 md:flex md:flex-row-reverse md:space-y-0 md:py-0">
+        <div className="reveal -mt-[150px] px-6 md:w-[500px] md:pl-20">
           <h1 className="text-primaryDark w-auto text-4xl font-bold leading-tight md:text-4xl md:leading-tight">
             <span className="text-primary"> Why You Need to </span> <br /> Pay
             Your Tax
           </h1>
-          <p className="text-textColor mt-8 text-lg font-medium leading-loose md:w-[500px]">
+          <p className="text-textColor mt-8 text-base font-medium leading-loose md:w-[500px]">
             Grow with us as you register and pay your tax with our online
             platefor you users who wants to join or pay at their own
             convenience.
@@ -30,9 +30,9 @@ function AboutSection() {
           <img
             src="/img/Rectangle 49.png"
             alt="about Image"
-            className="z-0  h-auto w-full object-cover md:h-[700px] md:w-[700px] lg:w-[900px]"
+            className="z-0  h-auto w-full object-cover md:h-[700px] md:w-[500px] lg:w-[700px]"
           />
-          <div className="bg-primary relative z-50 -mt-4 flex justify-between space-x-8 px-12 py-12 md:z-40 md:-mt-[100px] md:ml-[200px] md:w-[600px]">
+          <div className="reveal bg-primary relative z-50 -mt-4 flex justify-between space-x-8 px-12 py-12 md:z-40 md:-mt-[100px] md:ml-[200px] md:w-[600px]">
             <div className="space-y-6  text-white">
               <h2 className="text-4xl font-bold">200+</h2>
               <p className="border-t border-[#FFC155] pt-4 pb-6">

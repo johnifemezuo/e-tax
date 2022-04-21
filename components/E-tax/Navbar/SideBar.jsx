@@ -4,6 +4,7 @@ import { openSideBar } from "../../../stores/siteAtom";
 import Logo from "../Logo/Logo";
 import NavLinks from "./NavLinks";
 import Link from "next/link";
+import Container from "../../../layout/Container";
 
 function SideBar() {
   const [sidebar] = useAtom(openSideBar);
@@ -16,12 +17,32 @@ function SideBar() {
     >
       <div className="px-6 ">
         <div className="h-14 w-20">
-
-        <Logo />
+          <Logo />
         </div>
 
         <div className="md:hidden">
           <NavLinks />
+        </div>
+
+        <div className="bg-primaryDark w-full absolute bottom-0 right-0 left-0 py-12 md:block  ">
+          <Container>
+            <div className="grid n">
+              <div className="space-y-4  text-sm">
+                <strong className="font-semibold text-white">
+                  Monday - Friday
+                </strong>
+                <p className=" text-[#A0A0A0]">8AM - 5PM</p>
+              </div>
+              <div className="space-y-4 mt-6  text-sm">
+                <strong className="font-semibold text-white">
+                  Head Office
+                </strong>
+                <p className=" text-[#A0A0A0]">
+                  No 1 Esther Obiakor Estate Agu-Awka, Awka
+                </p>
+              </div>
+            </div>
+          </Container>
         </div>
       </div>
     </div>

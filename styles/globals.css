@@ -24,6 +24,17 @@ input{
   box-sizing: border-box;
 }
 
+.reveal {
+    position: relative;
+    transform: translateY(120px);
+    opacity: 0;
+    transition: all 1.5s ease;
+  }
+  .reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -31,6 +42,9 @@ input{
 @layer utilities {
   .theme-transition {
     @apply transition-all duration-300;
+  }
+  .btn-rounded-full-border {
+    @apply rounded-full border border-white;
   }
  .darkThemeBg {
     @apply bg-gray-600;
@@ -51,7 +65,7 @@ input{
     @apply text-gray-300 transition-all duration-300;
   }
   .buttonNeutral{
-    @apply px-6 py-4 text-sm rounded-none font-medium
+    @apply px-8 py-5 text-sm font-medium
   }
   .items--center {
     @apply flex items-center

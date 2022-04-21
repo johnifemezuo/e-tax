@@ -1,0 +1,23 @@
+import React from 'react'
+
+function BriefcaseIcon() {
+  return (
+    <>
+      <svg
+        viewBox="0 0 15 15"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        width="36"
+              height="36"
+              className='text-white'
+      >
+        <path
+          d="M5.5 3v-.5a2 2 0 114 0V3m-9 8.5h14m-13-8h12a1 1 0 011 1v9a1 1 0 01-1 1h-12a1 1 0 01-1-1v-9a1 1 0 011-1z"
+          stroke="currentColor"
+        ></path>
+      </svg>
+    </>
+  );
+}
+
+export default BriefcaseIcon

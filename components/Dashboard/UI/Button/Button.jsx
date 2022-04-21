@@ -2,11 +2,11 @@ import React from "react";
 import Loader from "../../icons/Svg/Loader";
 // import Loader from "../theme/Svg/Loader";
 
-function ButtonDanger({ click, customStyle, children, disabled, isloading }) {
+function Button({ click, customStyle, children, disabled, isloading }) {
   return (
     <button
       disabled={disabled}
-      className={`${customStyle} text-center theme-transition buttonNeutral cursor-point uppercase
+      className={`${customStyle} text-center flex items-center theme-transition buttonNeutral cursor-point uppercase
         `}
       onClick={click}
     >
@@ -16,4 +16,4 @@ function ButtonDanger({ click, customStyle, children, disabled, isloading }) {
   );
 }
 
-export default ButtonDanger;
+export default Button;

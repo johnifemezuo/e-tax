@@ -8,7 +8,7 @@ function Footer() {
       <div className="bg-teal">
         <Container>
           <div className=" grid space-y-12 md:space-y-0 md:flex justify-between pt-20 pb-12">
-            <div className="space-y-2">
+            <div className="reveal space-y-2">
               <h2 className="mb-12 text-3xl font-semibold text-white">
                 Headquarters
               </h2>
@@ -19,7 +19,7 @@ function Footer() {
               <p className="text-gray-300">https://www.airs.an.gov.ng</p>
             </div>
 
-            <div className="space-y-2">
+            <div className="reveal space-y-2">
               <h2 className="mb-12 text-3xl font-semibold text-white">
                 Contact
               </h2>
