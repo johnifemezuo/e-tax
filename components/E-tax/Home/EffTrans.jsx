@@ -22,7 +22,7 @@ function EffTrans() {
           
         </div>
       </Container>
-      <div className="reveal top-0 right-0 bottom-0 mt-12 md:mt-0 md:absolute md:w-[700px]  md:pt-0">
+      <div className=" top-0 right-0 bottom-0 mt-12 md:mt-0 md:absolute md:w-[700px]  md:pt-0">
         <img
           src="/img/Rectangle.png"
           alt="about Image"

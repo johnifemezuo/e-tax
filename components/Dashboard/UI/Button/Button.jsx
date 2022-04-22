@@ -6,7 +6,7 @@ function Button({ click, customStyle, children, disabled, isloading }) {
   return (
     <button
       disabled={disabled}
-      className={`${customStyle} text-center flex items-center theme-transition buttonNeutral cursor-point uppercase
+      className={`${customStyle} text-center items-center theme-transition buttonNeutral cursor-point uppercase
         `}
       onClick={click}
     >

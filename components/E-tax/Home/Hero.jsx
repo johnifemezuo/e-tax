@@ -2,10 +2,11 @@ import React from "react";
 import Container from "../../../layout/Container";
 import Button from "../../Dashboard/UI/Button/Button";
 import Link from "next/link";
-import  { useRouter } from "next/router";
+import { useRouter } from "next/router";
+import Router, { withRouter } from "next/router";
 
 function Hero() {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <div className="relative h-screen md:h-[750px]">
       <div className="">
@@ -16,7 +17,7 @@ function Hero() {
         />
       </div>
 
-      <div className=" bg-primary Transparent absolute top-0 left-0 h-screen w-full pb-12 pt-20 md:h-full md:pt-36">
+      <div className=" bg-primaryTransparent absolute top-0 left-0 h-screen w-full pb-12 pt-20 md:h-full md:pt-36">
         <Container>
           <h1 className=" text-primaryDark relative w-auto text-5xl font-bold leading-tight md:w-[700px] md:text-6xl ">
             Pay Your <span className=" text-teal">tax</span> and Lets grow
@@ -28,16 +29,24 @@ function Hero() {
             convenience.
           </p>
           <div className="flex space-x-8 py-12">
-            <Button
-              customStyle={`bg-white text-primaryDark hover:bg-neutral-200`}
-            >
-              Pay Tax Now
-            </Button>
-            <Button
-              customStyle={`text-white bg-primaryDark hover:bg-neutral-700`}
-            >
-              Register Now
-            </Button>
+            <Link href={`/findUnion`}>
+              <a>
+                <Button
+                  customStyle={`bg-white text-primaryDark hover:bg-neutral-200`}
+                >
+                  Pay Tax Now
+                </Button>
+              </a>
+            </Link>
+            <Link href={`/onlineReg`}>
+              <a>
+                <Button
+                  customStyle={`text-white bg-primaryDark hover:bg-neutral-700`}
+                >
+                  Register Now
+                </Button>
+              </a>
+            </Link>
           </div>
         </Container>
 

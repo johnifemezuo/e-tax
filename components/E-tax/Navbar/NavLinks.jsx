@@ -28,9 +28,13 @@ function NavLinks() {
           </Link>
         </li>
 
-        <Button customStyle="bg-[#FFC359] text-primaryDark hover:bg-[#F5A312] hover:text-white">
-          sign In now
-        </Button>
+        <Link href="/auth/login">
+          <a className="">
+            <Button customStyle="bg-[#FFC359] mt-12 md:mt-0 text-primaryDark hover:bg-[#F5A312] hover:text-white">
+              sign In now
+            </Button>
+          </a>
+        </Link>
         {/* <button className="text-primaryDark bg-primary p-6 py-4 font-medium">
           sign in now
         </button> */}

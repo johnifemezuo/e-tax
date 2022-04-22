@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 import Container from '../../../layout/Container'
 import Button from '../../Dashboard/UI/Button/Button';
@@ -47,11 +48,15 @@ function RegistOption() {
               <h2 className="text-xl font-bold text-white md:text-2xl">
                 Register online
               </h2>
-              <Button
-                customStyle={`text-primaryDark mt-4 bg-white hover:bg-neutral-200`}
-              >
-                Register Now
-              </Button>
+              <Link href={`/onlineReg`}>
+                <a>
+                  <Button
+                    customStyle={`text-primaryDark mt-4 bg-white hover:bg-neutral-200`}
+                  >
+                    Register Now
+                  </Button>
+                </a>
+              </Link>
             </div>
           </div>
         </div>

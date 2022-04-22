@@ -3,7 +3,6 @@ import { useAtom } from "jotai";
 import { openSideBar } from "../../../stores/siteAtom";
 import Logo from "../Logo/Logo";
 import NavLinks from "./NavLinks";
-import Link from "next/link";
 import Container from "../../../layout/Container";
 
 function SideBar() {
