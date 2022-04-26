@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function ButtonInfo({
   click,
   className,
@@ -15,7 +16,7 @@ function ButtonInfo({
         onClick={click}
       >
         {children}
-        {/* {isloading ? <Loader /> : ""} */}
+        {isloading ? <Loader /> : ""}
       </button>
   );
 }

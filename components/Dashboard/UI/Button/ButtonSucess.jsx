@@ -17,3 +17,4 @@ function ButtonSucess({ click, className = "px-4", disabled, children, isloading
 }
 
 export default ButtonSucess;
+

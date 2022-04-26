@@ -13,7 +13,10 @@ module.exports = {
         overlayColor: "var(--overlayColor)",
         redColor: "var(--redColor)",
         greenColor: "var(--greenColor)",
-        muted:"var(--muted)"
+        darkYellow: "var(--darkYellow)",
+        whiteColor: "var(--whiteColor)",
+        greenColor: "var(--greenColor)",
+        muted: "var(--muted)",
       },
     },
   },
