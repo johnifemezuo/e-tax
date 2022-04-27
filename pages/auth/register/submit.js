@@ -1,9 +1,7 @@
 import React from "react";
 import Input from "../../../components/Dashboard/Forms/Input/Input";
 import ButtonSucess from "../../../components/Dashboard/UI/Button/ButtonSucess";
-import BusinessInformation from "../../../components/Register/BusinessInformation/BusinessInformation";
-import ContactInformation from "../../../components/Register/ContactInformation/ContactInformation";
-import PersonalInfomation from "../../../components/Register/PersonalInfomation/PersonalInfomation";
+
 
 function SubmitPage() {
   return (

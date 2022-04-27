@@ -10,4 +10,12 @@
   --darkYellow: #FFAF22;
   --whiteColor: #fff;
   --greenColor: #5DC522;
+
+  /* --------etax colors--------------- */
+  --primary: #FFAF22;
+  --primaryDark: #151515;
+  --green: #5DC522;
+  --teal:#1786A8;
+  --textColor: #656565;
+  --primaryTransparent: #ffaf22f2;
 }

@@ -17,6 +17,15 @@ module.exports = {
         whiteColor: "var(--whiteColor)",
         greenColor: "var(--greenColor)",
         muted: "var(--muted)",
+        muted: "var(--muted)",
+
+        // -----e-tax colors-----------
+        primary: "var(--primary)",
+        primaryDark: "var(--primaryDark)",
+        green: "var(--green)",
+        teal: "var(--teal)",
+        textColor: "var(--textColor)",
+        primaryTransparent: "var(--primaryTransparent)"
       },
     },
   },

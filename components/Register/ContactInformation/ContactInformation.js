@@ -27,15 +27,7 @@ export default function ContactInformation() {
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm({
-    defaultValues: {
-      residence: "Atani",
-      businessResidence: "Ekwulobia",
-      phoneNumber: "1234455433456",
-      email: "example@gmailc.om",
-      state: "Abuja",
-    },
-  });
+  } = useForm({ mode: "onChange" });
 
   const onSubmit = (data) => console.log(data);
 

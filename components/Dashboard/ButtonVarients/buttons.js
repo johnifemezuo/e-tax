@@ -4,6 +4,7 @@ import ButtonInfo from "../../components/Dashboard/AdminLayouts/Button/ButtonInf
 import ButtonSucess from "../../components/Dashboard/AdminLayouts/Button/ButtonSucess";
 import ButtonWarning from "../../components/Dashboard/AdminLayouts/Button/ButtonWarning";
 
+
 function buttons() {
   return (
     <div>
@@ -58,5 +59,7 @@ function buttons() {
     </div>
   );
 }
+
+
 
 export default buttons;

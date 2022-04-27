@@ -1,6 +1,8 @@
 import React from "react";
 
 
+
+
 function ButtonInfo({
   click,
   className,
@@ -22,3 +24,4 @@ function ButtonInfo({
 }
 
 export default ButtonInfo;
+

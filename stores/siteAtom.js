@@ -5,4 +5,5 @@ export const openDevProject = atom(false)
 
 export const createConent = atom(false)
 
+export const openSideBar = atom(true)
 

@@ -15,15 +15,7 @@ export default function BusinessInformation() {
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm({
-    defaultValues: {
-      businessType: "Ibeto and Brother",
-      businessName: "Ibeto  Factory",
-      howManyOthers: 12,
-      employeeCount: "12 Employees",
-      registered: "Yes",
-    },
-  });
+  } = useForm({ mode: "onChange"  });
 
   const onSubmit = (data) => console.log(data);
 

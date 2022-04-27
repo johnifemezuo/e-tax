@@ -15,18 +15,12 @@ function PersonalInfomation() {
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm({
-    defaultValues: {
-      firstName: "bill",
-      surename: "luo",
-      age: 60,
-      location: "Abuja",
-    },
-  });
+  } = useForm({ mode: "onChange",   });
 
   const onSubmit = (data) => {
     console.log(data);
   };
+  
 
   const ErrorBorderHandler = (
     defaultBorder,
@@ -42,12 +36,10 @@ function PersonalInfomation() {
 
   return (
     <div>
-      <div className="flex items-center justify-between">
-        <p className="text-sm text-[#656262]">
-          All your personal info will save guarded and protected.
-        </p>
-        <button className="text-sm text-[#1786A8]">Edit</button>
-      </div>
+      <h1 className="text-lg font-semibold text-black">Personal Information</h1>
+      <p className="text-sm text-[#656262]">
+        All your personal info will save guarded and protected.
+      </p>
 
       <div className="my-4 border-b border-[#DDDDDD]" />
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -81,7 +73,6 @@ function PersonalInfomation() {
               inputConfig={{
                 ...register("firstName", {
                   required: "This field is required.",
-
                   onChange: () =>
                     ErrorBorderHandler(
                       firstNameBorder,
